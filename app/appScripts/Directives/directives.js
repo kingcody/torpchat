@@ -1,6 +1,6 @@
 'use strict';
 
-define(['Controllers/controllers',"angular-strap",'jquery-ui','bootstrap-dropdown'],function(controllers){
+define(['Controllers/controllers','jquery-ui','bootstrap-dropdown'],function(controllers){
 
 var directives = {};
 

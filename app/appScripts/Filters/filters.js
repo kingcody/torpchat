@@ -1,7 +1,7 @@
 'use strict';
 
 /* Filters */
-define(['underscore'],function() {
+define(['lodash'],function() {
 
     function initialize(app) {
 		app.filter(('interpolate'),function(version){

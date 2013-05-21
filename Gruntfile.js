@@ -47,8 +47,8 @@ module.exports = function (grunt) {
 	
 	// Client-side Bower packages for requirejs
 	var requireBowerJS = {
-		'underscore': {
-			path: 'underscore-amd/underscore',
+		'lodash': {
+			path: 'lodash/lodash',
 			shim: '_'
 		},
 		'angular': {
@@ -66,9 +66,6 @@ module.exports = function (grunt) {
 		},
 		'angular-sanitize': {
 			path: 'angular-sanitize/angular-sanitize'
-		},
-		'angular-strap': {
-			path: 'angular-strap/dist/angular-strap-amd'
 		},
 		'jquery': {
 			path: 'jquery/jquery'

@@ -1,5 +1,5 @@
 /* Controllers */
-define(['underscore'], function() {
+define(['lodash'], function() {
 	var controllers = {};
 
 	controllers.MainCtrl = function($rootScope, $scope, $log, setEqual) {

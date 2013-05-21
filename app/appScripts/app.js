@@ -5,7 +5,7 @@ define(
 	"Directives/directives",
 	"Filters/filters",
 	"Controllers/controllers",
-	'underscore'
+	'lodash'
     ],
 
     function BaseManager(angular,Services,Directives,Filters,Controllers){
