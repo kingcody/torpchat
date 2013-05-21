@@ -6,29 +6,42 @@ A web based IRC client, using nodejs as the bouncer with socket.io as the client
 
 
 Installation
-============
+------------
 
-npm install -g grunt-cli
-npm install -g bower
+Install grunt command-line and bower both globally
 
-cd <torpchat>
+```bash
+npm install -g grunt-cli && npm install -g bower
+```
 
-npm install
+Install required node modules
+
+```bash
+cd torpchat && npm install
+```
+
+Install the client-side modules with bower
+
+```bash
 bower install
-
+```
 
 
 Build
-=====
+-----
 
+```bash
 grunt build
-
+```
 
 
 Develop
-=======
+-------
 
+```bash
 grunt devel
+```
+
 
 
 
