@@ -1,0 +1,27 @@
+.irc-client(style="display: none;",id='{{windowId}}')
+	.irc-main-nav.navbar.navbar-inverse
+		.navbar-inner
+			ul.nav
+				li.dropdown(ng-init='dropId = "drop"+$id',ng-click='$alert("success")')
+					a.brand.dropdown-toggle(class='{{mainMenu.className}}',data-toggle="dropdown",ng-href='',id='{{dropId}}')
+						i(class='{{mainMenu.icon}}')
+						span {{mainMenu.text}}
+					ul.dropdown-menu(role="menu", aria-labelledby="{{dropId}}")
+						li(ng-repeat='item in mainMenu.menu', class='{{item.state}}')
+							a(ng-click='$eval(item.click)', class='{{item.className}}', tabindex='-1')
+								i(class='{{item.icon}}')
+								|  {{item.text}}
+			ul.nav
+				li.dropdown(ng-repeat='menu in windowMenus',ng-init='dropId = "drop"+$id')
+					a.dropdown-toggle(class='{{menu.className}}',data-toggle="dropdown",ng-href='',id='{{dropId}}')
+						i(class='{{menu.icon}}')
+						|  {{menu.text}}
+					ul.dropdown-menu(role="menu", aria-labelledby="{{dropId}}")
+						li(ng-repeat='item in menu.menu', class='{{item.state}}')
+							a(ng-click='$eval(item.click)', class='{{item.className}}', tabindex='-1')
+								i(class='{{item.icon}}')
+								|  {{item.text}}
+			ul.nav.pull-right
+				li(ng-repeat='button in tcWindowButtons')
+					a(class='{{button.className}}', ng-click='$eval(button.click)', title='{{button.title}}')
+						i(class='{{button.icon}}')

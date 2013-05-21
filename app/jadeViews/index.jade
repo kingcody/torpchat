@@ -1,0 +1,48 @@
+!!! 5
+//if lt IE 7
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+//if IE 7
+	<html class="no-js lt-ie9 lt-ie8">
+//if IE 8
+	<html class="no-js lt-ie9">
+//[if gt IE 8]><!
+html(class='no-js')
+	//<![endif]
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+ 
+		title
+ 
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+ 
+		link(rel='stylesheet', href='/'+appPaths.stylesheets+'/style.css')
+		script(src='/'+appPaths.scripts+'/vendor/modernizr/modernizr.js')
+
+	body
+		//if lt IE 7
+			p.chromeframe.
+				You are using an <strong>outdated</strong> browser.
+				Please <a href="http://browsehappy.com/">upgrade your browser</a> or
+				<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>
+				to improve your experience.
+
+		#wrap
+			.container
+				.row
+					.span10.offset1
+						h1 TORPChat
+						p Created by Digitally Seamless, Powered by Node
+						button.btn Launch TORPChat
+
+						div(ng-view, id="main-container")
+			#push
+		footer
+			p.muted.text-center
+				- var date = new Date, date = date.getFullYear();
+				| &copy; #{date} 
+				a(href="digitallyseamless.com") Digitally Seamless
+				| , all rights reserved
+		script(data-main='/'+appPaths.scripts+"/main", src='/'+appPaths.scripts+"/"+appPaths.scriptsBower+"/requirejs/require-jquery.js")
+			

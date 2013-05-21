@@ -1,0 +1,299 @@
+/*
+* Custom Rules 
+*/
+
+// Page Styling and Custom overwrites
+// ----------------------------------
+
+html, body {
+	height: 100%;
+}
+
+a, button {
+	&,
+	&:focus,
+	&:active,
+	&:hover {
+		outline: 0 !important;
+	}
+}
+
+option:checked {
+	text-decoration: none;
+	color: @dropdownLinkColorHover;
+	#gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -40px;
+}
+
+#main-container {
+	margin-top: 30px;
+}
+
+.irc-client {
+	
+	position: relative;
+	min-width: 750px;
+    height: 480px;
+	background: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+    .border-radius(6px);
+	.box-shadow(0 4px 9px rgba(0, 0, 0, 0.2));
+
+	.irc-main-nav {
+		@baseColor: #DDDDDD;
+		@hoverColor: #1484E6;
+
+		.nav a,
+		a i {
+			cursor: pointer;
+		}
+
+		&.navbar.navbar-inverse {
+			margin-top: -1px;
+			margin-left: -1px;
+			margin-right: -1px;
+		}
+
+		&.navbar.navbar-inverse .navbar-inner {
+			padding-right: 8px;
+			.border-radius(6px);
+			.border-bottom-left-radius(4px);
+			.border-bottom-right-radius(4px);
+			box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+		}
+		
+		&.navbar.navbar-inverse .navbar-inner,
+		&.navbar-inverse .nav > li {
+			position: relative;
+		}
+
+		&.navbar.navbar-inverse .brand {
+			padding: 1px 12px 0;
+
+			[class^='icon-'],
+			[class*='icon-'] {
+				font-size: 1.8em;
+				width: 1em;
+				margin: 2px;
+			}
+
+			span {
+				vertical-align: .3em;
+			}
+		}
+
+		&.navbar.navbar-inverse .brand,
+		&.navbar-inverse .nav > li > a {
+			color: @baseColor;
+			.transition(color 300ms ease-out);
+		}
+
+		&.navbar.navbar-inverse .brand:hover,
+		&.navbar-inverse .nav > li > a:hover {
+			color: @hoverColor;
+			.transition(color 300ms ease-out);
+		}
+
+		&.navbar .nav ul.dropdown-menu li > a {
+			padding: 2px 8px;
+		}
+
+		&.navbar .nav > li > .dropdown-menu:before {
+			left: 18px;
+		}
+
+		&.navbar .nav > li > .dropdown-menu:after {
+			left: 19px;
+		}
+
+		&.navbar.navbar-inverse .window-button-1:hover {
+			color: #CD4A48;
+		}
+
+		&.navbar.navbar-inverse .window-button-2:hover {
+			color: #D8AD49;
+		}
+
+	}
+
+}
+
+.ui-dialog {
+	
+	input[type="file"]:focus, input[type="checkbox"]:focus, select:focus {
+		box-shadow: none;
+		outline: 0px none;
+	}
+
+	[id^='tcServerList'],
+	[id*='tcServerList'],
+	[class^='ui-dialog-content'],
+	[class*='ui-dialog-content'] {
+		.server-list {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+		.listwrapper {
+			margin-left: 0px;
+			margin-right: 54px;
+			height: 100%;
+
+			select.serverselect {
+				width: 100%;
+				height: 100%;
+				margin: 0px;
+			}
+		}
+
+		.listwrapper select.serverselect option,
+		select.domainselect option {
+			padding: 3px 6px;
+		}
+
+		.listbuttons,
+		.movebuttons {
+			position: absolute;
+			top: 50%;
+		}
+
+		.listbuttons {
+			margin-top: -44px;
+			right: 0;
+		}
+
+		.movebuttons {
+			margin-top: -29.5px;
+		}
+
+		.movebuttons .btn {
+			color: #404040;
+		}
+
+		.listbuttons .btn i,
+		.movebuttons .btn i {
+			display: inline-block;
+			width: 14px;
+		}
+
+		form-horizontal.fluid .control-label {
+			width: 20%;
+		}
+
+		.form-horizontal.fluid .controls {
+			margin-left: 20%;
+		}
+
+		.form-horizontal.fluid .controls input {
+			width: 77%;
+		}
+	}
+
+	.tc-server-edit {
+		
+		form {
+			margin-bottom: 4px;
+		}
+		.server-name {
+			
+			.name {
+				margin-bottom: 0px;
+			}
+			&,.control-group {
+				margin: 0px;
+
+				.server-name-input {
+					margin: 12px 6px;
+					width: 76%
+				}
+			}
+		}
+		.domains {
+			position: absolute;
+			top: 100px;
+			left: 14px;
+			right: 14px;
+			bottom: 238px;
+
+			.domain-list {
+				position: absolute;
+				top: 68px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				
+				& > label {
+					margin-top: -24px;
+				}
+				& > .control-group {
+					margin: 0;
+					position: absolute;
+					left: 54px;
+					right: 54px;
+					top: 0;
+					bottom: 0;
+
+					select {
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+		}
+		& > .form-horizontal.fluid {
+			position: absolute;
+			left: 14px;
+			right: 14px;
+			bottom: 0;
+
+			legend {
+				margin-bottom: 0;
+			}
+			.control-group {
+				margin-top: 8px;
+				margin-bottom: 6px;
+
+				.controls {
+					.checkbox {
+
+						input {
+							position: relative;
+							bottom: 1px;
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+	.tc-domain-edit {
+				
+		form {
+			margin-top: 14px;
+
+			.control-group {
+
+				.control-label {
+					width: 25%;
+				}
+				.controls {
+					margin-left: 27%;
+				}
+			}
+		}
+	}
+}
+
+#push, footer {
+	height: 40px;
+}
+
+footer {
+	margin-top: 40px;
+}
