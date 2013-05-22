@@ -8,13 +8,13 @@
     "angular-resource": "~1.0.6",
     "angular-sanitize": "~1.0.6",
     "angular-scenario": "~1.0.6",
-    "bootstrap": "~2.3.1",
+    "bootstrap": "https://github.com/twitter/bootstrap.git",
     "jquery": "~2.0.0",
-    "requirejs": "~2.1.6",
-    "modernizr": "~2.6.2",
-    "font-awesome": "~3.1.1",
-    "jquery-ui": "~1.10.3",
-    "lodash": "~1.2.1"
+    "requirejs": "https://github.com/jrburke/requirejs.git",
+    "modernizr": "https://github.com/Modernizr/Modernizr.git",
+    "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git",
+    "jquery-ui": "https://github.com/components/jqueryui.git",
+    "lodash": "https://github.com/bestiejs/lodash.git"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.5",

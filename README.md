@@ -25,6 +25,8 @@ Install the client-side modules with bower
 ```bash
 bower install
 ```
+*Note: If bower fails on any packages, this may have to do with server overload. Running bower install again may correct the issue.*
+
 
 
 Build
@@ -45,4 +47,4 @@ grunt devel
 
 
 
--note- default task for grunt is to build then devel
+*Note: The default task for grunt is to build then devel.*
