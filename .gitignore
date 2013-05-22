@@ -9,3 +9,5 @@ test
 karma*
 nbproject
 app/components
+.gitattributes
+.git
