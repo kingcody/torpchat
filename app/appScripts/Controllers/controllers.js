@@ -298,6 +298,7 @@ define(['lodash'], function() {
 			serverList: false
 		};
 		$scope.selectedServer = $scope.tcScope.ircServerList.TORPNet;
+		$scope.activeServer = false;
 	};
 
 	controllers.ircNavBar = function($scope, $rootScope, tcServerList) {
