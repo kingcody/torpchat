@@ -51,6 +51,10 @@ module.exports = function (grunt) {
 			path: 'lodash/lodash',
 			shim: '_'
 		},
+		'socket.io': {
+			path: '../../socket.io/socket.io',
+			shim: 'io'
+		},
 		'angular': {
 			path: 'angular/angular',
 			shim: 'angular'
@@ -229,8 +233,8 @@ module.exports = function (grunt) {
 					expand: true,
 					cwd: '<%= yeoman.app %>/<%= yeoman.bowerComponents %>',
 					dest: '.tmp/<%= yeoman.distScripts %>/<%= yeoman.distBower %>/',
-					src: _.map(_.values(requireBowerJS), function (value) {
-						return  value.path + '*';
+					src: _.map(_.values(_.omit(requireBowerJS, 'socket.io')), function (value) {
+							return  value.path + '*';
 					})
 				}
 			]

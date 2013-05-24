@@ -2,7 +2,7 @@
 
 /* Services */
 
-define(['jquery-ui', 'lodash'], function() {
+define(['jquery-ui', 'lodash', 'Services/connection'], function() {
 
 	// TORPChat Dialog extends the jquery-ui dialog widget. 
 	// ----------------------------------------------------
