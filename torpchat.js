@@ -36,3 +36,10 @@ io = require('socket.io').listen(server);
 
 // Initialize irc bouncer with created io
 socketserver.use(io);
+
+// expose express
+exports = module.exports = server,
+// delegates use() function for requiring
+exports.use = function() {
+  app.use.apply(app, arguments);
+};
