@@ -1,6 +1,6 @@
 'use strict';
 
-define(['socket-io'], function(io) {
+define(['socket.io'], function(io) {
 	var connection = {},
 	socket = io.connect('/');
 	socket.on('connect', function() {
