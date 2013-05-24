@@ -7,6 +7,7 @@ var express = require('express')
 	, appPaths = require(__dirname + "/" + 'paths.json')
 	, routes = require("./"+appPaths.routes).init(appPaths)
 	, http = require('http')
+	, socketserver = require('./app_modules/server.io')
 	, path = require('path');
 
 var app = express();
@@ -33,12 +34,5 @@ app.use(routes.render);
 var server = http.createServer(app),
 io = require('socket.io').listen(server);
 
-exports = module.exports = server,
-// delegates user() function
-exports.use = function() {
-	app.use.apply(app, arguments);
-},
-exports.set = function() {
-	app.set.apply(app, [arguments[0],arguments[1]]);
-};
-
+// Initialize irc bouncer with created io
+socketserver.use(io);
