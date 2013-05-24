@@ -10,7 +10,8 @@
     "jade": "*",
     "less-middleware": "*",
     "socket.io": "~0.9.14",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "irc": "~0.3.6"
   },
   "devDependencies": {
     "grunt-express": "~0.3.3",
