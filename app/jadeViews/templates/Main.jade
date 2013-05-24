@@ -25,3 +25,13 @@
 				li(ng-repeat='button in tcWindowButtons')
 					a(class='{{button.className}}', ng-click='$eval(button.click)', title='{{button.title}}')
 						i(class='{{button.icon}}')
+
+	.window-main
+		.window-tab-control
+			ul.nav.nav-tabs
+				li.active
+					a(href='#')
+						| {{activeServer.torpchat.name || 'server'}}
+		.window-tab-view
+			.tab-content
+				.tab-pane.active
