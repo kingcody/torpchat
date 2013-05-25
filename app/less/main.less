@@ -35,6 +35,23 @@ option:checked {
 	margin-top: 30px;
 }
 
+// Active state, and it's :hover/:focus to override normal :hover/:focus
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  border-bottom-color: @bodyBackground;
+}
+
+#push, footer {
+	height: 40px;
+}
+
+footer {
+	margin-top: 40px;
+}
+
+
+// Specific TORPChat Styles
 .irc-client {
 	
 	position: relative;
@@ -120,6 +137,20 @@ option:checked {
 			color: #D8AD49;
 		}
 
+	}
+
+	.window-main {
+		
+		.window-tab-control {
+			
+			ul.nav.nav-tabs {
+				padding: 0 6px;
+			}
+		}
+		
+		.window-tab-view {
+			
+		}
 	}
 
 }
@@ -290,12 +321,4 @@ option:checked {
 			}
 		}
 	}
-}
-
-#push, footer {
-	height: 40px;
-}
-
-footer {
-	margin-top: 40px;
 }
