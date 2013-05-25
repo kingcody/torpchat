@@ -35,8 +35,40 @@ option:checked {
 	margin-top: 30px;
 }
 
+// Active state, and it's :hover/:focus to override normal :hover/:focus
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  border-bottom-color: @bodyBackground;
+}
+
+.app-grad(@startColor: #ffffff, @startStop: 0%, @midColor: #f5f5f5, @midStop: 30%, @endColor: #f0f0f0, @endStop: 71%) {
+	background: @startColor;
+	background: -moz-linear-gradient(top,  @startColor @startStop, @midColor @midStop, @endColor @endStop);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(@startStop,@startColor), color-stop(@midStop,@midColor), color-stop(@endStop,@endColor));
+	background: -webkit-linear-gradient(top,  @startColor @startStop,@midColor @midStop,@endColor @endStop);
+	background: -o-linear-gradient(top,  @startColor @startStop,@midColor @midStop,@endColor @endStop);
+	background: -ms-linear-gradient(top,  @startColor @startStop,@midColor @midStop,@endColor @endStop);
+	background: linear-gradient(to bottom,  @startColor @startStop,@midColor @midStop,@endColor @endStop);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@startColor', endColorstr='@endColor',GradientType=0 );
+}
+
+.app-grad1 {
+	.app-grad();
+}
+
+#push, footer {
+	height: 40px;
+}
+
+footer {
+	margin-top: 40px;
+}
+
+
+// Specific TORPChat Styles
 .irc-client {
-	
+	overflow: hidden;
 	position: relative;
 	min-width: 750px;
     height: 480px;
@@ -55,9 +87,7 @@ option:checked {
 		}
 
 		&.navbar.navbar-inverse {
-			margin-top: -1px;
-			margin-left: -1px;
-			margin-right: -1px;
+			margin: -1px -1px 0;
 		}
 
 		&.navbar.navbar-inverse .navbar-inner {
@@ -120,6 +150,44 @@ option:checked {
 			color: #D8AD49;
 		}
 
+	}
+
+	.window-main {
+		position: absolute;
+		top: 48px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		.window-tab-control {
+			padding-top: 8px;
+
+			ul.nav.nav-tabs {
+				padding: 0 6px;
+
+				.active > a,
+				.active > a:hover,
+				.active > a:focus {
+					color: #0069D6;
+				}
+			}
+		}
+		
+		.window-tab-view {
+			position: absolute;
+			top: 46px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			
+			.tab-content {
+				height: 100%;
+
+				.tab-pane {
+					height: 100%;
+				}
+			}
+		}
 	}
 
 }
@@ -290,12 +358,4 @@ option:checked {
 			}
 		}
 	}
-}
-
-#push, footer {
-	height: 40px;
-}
-
-footer {
-	margin-top: 40px;
 }
