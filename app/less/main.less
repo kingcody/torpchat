@@ -72,9 +72,7 @@ footer {
 		}
 
 		&.navbar.navbar-inverse {
-			margin-top: -1px;
-			margin-left: -1px;
-			margin-right: -1px;
+			margin: -1px -1px 0;
 		}
 
 		&.navbar.navbar-inverse .navbar-inner {
@@ -140,16 +138,30 @@ footer {
 	}
 
 	.window-main {
-		
+		position: absolute;
+		top: 48px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
 		.window-tab-control {
-			
+			padding-top: 8px;
+
 			ul.nav.nav-tabs {
 				padding: 0 6px;
 			}
 		}
 		
 		.window-tab-view {
+			position: absolute;
+			top: 46px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
 			
+			.tab-content {
+				height: 100%;
+			}
 		}
 	}
 
