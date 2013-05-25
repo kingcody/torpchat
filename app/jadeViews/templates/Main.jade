@@ -27,11 +27,12 @@
 						i(class='{{button.icon}}')
 
 	.window-main
-		.window-tab-control
+		.window-tab-control.app-grad1
 			ul.nav.nav-tabs
 				li.active
 					a(href='#')
-						| {{activeServer.torpchat.name || 'server'}}
+						strong
+							| {{activeServer.torpchat.name || 'server'}}
 		.window-tab-view
 			.tab-content
-				.tab-pane.active
+				.tab-pane.app-grad1.active
