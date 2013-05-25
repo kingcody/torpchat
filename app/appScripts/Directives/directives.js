@@ -22,6 +22,10 @@ directives.ircClient = function() {
 						appendTo: 'body',
 						handle: '.navbar',
 						cancel: '.irc-main-nav.navbar.navbar-inverse a'
+					})
+					.resizable({
+						minHeight: 338,
+						minWidth: 400
 					});
 				}); 
 			};

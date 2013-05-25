@@ -33,6 +33,7 @@ option:checked {
 
 #main-container {
 	margin-top: 30px;
+	position: relative;
 }
 
 // Active state, and it's :hover/:focus to override normal :hover/:focus
@@ -69,8 +70,9 @@ footer {
 // Specific TORPChat Styles
 .irc-client {
 	overflow: hidden;
-	position: relative;
+	position: absolute;
 	min-width: 750px;
+	width: 100%;
     height: 480px;
 	background: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0.4);
@@ -185,6 +187,7 @@ footer {
 
 				.tab-pane {
 					height: 100%;
+					margin: 0 10px;
 				}
 			}
 		}
