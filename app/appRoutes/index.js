@@ -13,8 +13,7 @@ exports.init = function (a) {
 exports.render = function(req, res, next){
 	var reqUrl = req.url.replace(/\//, '');	
 	var reqUrl = reqUrl.replace(/\.html/gi, '');	
-	var reqUrl = reqUrl.replace(/\.jade/gi, '');	
-	console.log(reqUrl);
+	var reqUrl = reqUrl.replace(/\.jade/gi, '');
 	
 	res.render(reqUrl, { appPaths: appPaths }, function (err, html) {
 		if (err || !html) {
