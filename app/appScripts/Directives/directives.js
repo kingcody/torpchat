@@ -25,7 +25,8 @@ directives.ircClient = function() {
 					})
 					.resizable({
 						minHeight: 338,
-						minWidth: 400
+						minWidth: 672,
+						handles: 'n,e,s,w,se'
 					});
 				}); 
 			};
